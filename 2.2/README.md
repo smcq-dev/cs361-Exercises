@@ -1,0 +1,11 @@
+# cs361-Exercises
+What is the DRY principle?
+The DRY Principle is Do Not Repeat Yourself. It essentially means that you should never write functions, variables or other logic that has already been implemented in order to increase clarity and reduce mistakes. It is much easier to find out why something is wrong when there is one source of logic. 
+
+
+You will often hear that functions should be short and do one thing. Does that mean each function should always contain one statement? Why or why not?
+Keeping functions short and making them only do one thing doesn't necessarily mean a function should have only one line. The idea is that each function achieves one goal, using only a single layer of abstraction. This means there can be multiple lines of code that work towards the one goal, but we must make sure the goal is all the functions does, and make sure we don't use different levels of abstraction for the solution. This way code flows and reads logically. One function doesn't jump all over the place, using high level abstractions and very low ones at the same time.
+
+
+Imagine that you extract a unit of work into a well-named function, but that function is only called in one place. Your colleague argues, "Why do that? Now when I want to follow the code I have to jump from the call site to the function definition and then back, it breaks up my flow of reading. The function isn't being reused, so just replace the call with the actual statements so it's all right there." The argument has merit. But explain one or two reasons why having the function has its benefits.
+Although this argument does make sense, we need to think about the future. What if we need to add a significant amount of code to create new functionality? If we have this unit of work bundled into a function, we are already organized and ready to write. This makes the code much more maintainable. It is also worth arguing that bundling work into functions makes the code easier to understand, even if it makes the code read a little less linearly. This is because we abstract logic into clearly defined methods when we create functions, which makes it easy for us to spot what things are being done. 
